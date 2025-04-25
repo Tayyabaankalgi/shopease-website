@@ -1,0 +1,138 @@
+/* Reset and base styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /* Full viewport centered layout with green gradient background */
+  body {
+    background: linear-gradient(to right, #67AE6E, #67AE6E);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Main container holding the login form and image */
+  .container {
+    display: flex;
+    width: 90%;
+    max-width: 1000px;
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  }
+  
+  /* Left section - form and branding */
+  .left-section {
+    flex: 1;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  /* Brand heading styling */
+  .brand {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #67AE6E;
+  }
+  .brand span {
+    color: #67AE6E;
+  }
+  
+  /* Headings and paragraph under brand */
+  .left-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  .left-section p {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #555;
+  }
+  
+  /* Input fields */
+  input[type="email"],
+  input[type="password"] {
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    width: 100%;
+    font-size: 15px;
+  }
+  
+  /* Checkbox and forgot password area */
+  .options {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    margin-bottom: 20px;
+    color: #666;
+  }
+  
+  /* Login button */
+  .login-btn {
+    background-color: #67AE6E;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 15px;
+  }
+  
+  /* Google login button */
+  .google-login {
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 12px;
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+  }
+  
+  /* Register link */
+  .bottom-text {
+    font-size: 14px;
+    margin-top: 20px;
+  }
+  .bottom-text a {
+    color: #67AE6E;
+    text-decoration: none;
+  }
+  
+  /* Right section - image illustration */
+  .right-section {
+    flex: 1;
+    background: #90C67C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .right-section img {
+    width: 80%;
+    max-width: 350px;
+  }
+  
+  /* Responsive: Stack sections and hide image on smaller screens */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+  
+    .right-section {
+      display: none;
+    }
+  }
+  

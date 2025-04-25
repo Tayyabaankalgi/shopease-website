@@ -1,0 +1,172 @@
+* {
+  box-sizing: border-box; /* Ensures padding and border are included in width/height */
+  margin: 0; /* Removes default margin */
+  padding: 0; /* Removes default padding */
+  font-family: 'Poppins', sans-serif; /* Sets font */
+}
+
+body {
+  background: linear-gradient(to right, #67AE6E, #67AE6E); /* Gradient background */
+  min-height: 100vh; /* Full viewport height */
+  display: flex; /* Flexbox layout */
+  flex-direction: column; /* Stacks elements vertically */
+  justify-content: flex-start; /* Aligns content to top */
+  align-items: center; /* Centers content horizontally */
+  padding: 20px; /* Padding inside body */
+}
+
+header {
+  width: 100%; /* Full width */
+  padding: 20px; /* Padding inside header */
+  background-color: #F0F5F3; /* Header background */
+  display: flex; /* Flexbox layout */
+  justify-content: space-between; /* Spaces out header items */
+  align-items: center; /* Centers header items */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Shadow for header */
+  margin-bottom: 30px; /* Space below header */
+}
+
+header h1 {
+  font-size: 28px; /* Title font size */
+  color: #67AE6E; /* Title color */
+}
+
+header nav a {
+  font-size: 16px; /* Link font size */
+  color: #67AE6E; /* Link color */
+  text-decoration: none; /* Removes underline */
+  margin-left: 15px; /* Space between links */
+}
+
+header nav a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+.cart-container {
+  display: flex; /* Flexbox layout */
+  flex-direction: column; /* Stacks cart items */
+  width: 100%; /* Full width */
+  max-width: 1000px; /* Max width */
+  background: #fff; /* White background */
+  border-radius: 16px; /* Rounded corners */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Shadow for container */
+  padding: 30px; /* Padding inside container */
+}
+
+.cart-items {
+  display: flex; /* Flexbox layout */
+  flex-direction: column; /* Stacks items */
+  gap: 20px; /* Space between items */
+  margin-bottom: 30px; /* Space below items */
+}
+
+.product {
+  display: flex; /* Flexbox layout */
+  align-items: center; /* Centers items vertically */
+  justify-content: space-between; /* Spreads items */
+  background-color: #f9f9f9; /* Product background */
+  border-radius: 8px; /* Rounded corners */
+  padding: 15px; /* Padding inside product */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for product */
+}
+
+.product img {
+  width: 100px; /* Image width */
+  height: 100px; /* Image height */
+  object-fit: cover; /* Ensure image covers area */
+  border-radius: 8px; /* Rounded corners for image */
+  margin-right: 20px; /* Space between image and text */
+}
+
+.product h3 {
+  font-size: 18px; /* Product name font size */
+  font-weight: 600; /* Bold product name */
+  flex: 1; /* Flex grow for name */
+}
+
+.product p {
+  font-size: 16px; /* Price font size */
+  font-weight: 500; /* Semi-bold price */
+}
+
+.product button {
+  background-color: #67AE6E; /* Button background */
+  color: white; /* Button text color */
+  border: none; /* No border */
+  padding: 8px 15px; /* Button padding */
+  border-radius: 5px; /* Rounded button corners */
+  cursor: pointer; /* Pointer on hover */
+  font-size: 14px; /* Button text size */
+  transition: background-color 0.3s; /* Smooth background color change */
+}
+
+.product button:hover {
+  background-color: #4a9e5f; /* Darker green on hover */
+}
+
+.cart-summary {
+  background-color: #F0F5F3; /* Summary background */
+  border-radius: 16px; /* Rounded corners */
+  padding: 20px; /* Padding inside summary */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for summary */
+  text-align: center; /* Centers text */
+  margin-top: 20px; /* Space above summary */
+}
+
+.cart-summary h2 {
+  font-size: 24px; /* Summary title font size */
+  font-weight: 600; /* Bold title */
+  margin-bottom: 20px; /* Space below title */
+}
+
+.cart-summary .add-to-cart {
+  background-color: #67AE6E; /* Button background */
+  color: #F0F5F3; /* Button text color */
+  padding: 12px 20px; /* Button padding */
+  border: none; /* No border */
+  border-radius: 8px; /* Rounded button corners */
+  font-size: 18px; /* Button text size */
+  cursor: pointer; /* Pointer on hover */
+  transition: background-color 0.3s; /* Smooth background color change */
+}
+
+.cart-summary .add-to-cart:hover {
+  background-color: #4a9e5f; /* Darker green on hover */
+}
+
+.cart-items p {
+  font-size: 18px; /* Cart message font size */
+  color: #555; /* Darker text color */
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 10px; /* Reduced body padding */
+  }
+
+  .cart-container {
+    padding: 20px; /* Reduced container padding */
+  }
+
+  .cart-header {
+    flex-direction: column; /* Stacks header items */
+    align-items: flex-start; /* Aligns header to left */
+  }
+
+  .cart-items {
+    gap: 10px; /* Reduced gap between items */
+  }
+
+  .product {
+    flex-direction: column; /* Stacks product items */
+    align-items: flex-start; /* Aligns product to left */
+  }
+
+  .product img {
+    margin-bottom: 10px; /* Space below image */
+  }
+
+  .cart-summary {
+    margin-top: 20px; /* Space above summary */
+  }
+}

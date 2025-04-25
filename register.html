@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta information for character encoding and responsive design -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- Page title -->
+  <title>Register - YourShop</title>
+
+  <!-- Link to external CSS stylesheet -->
+  <link rel="stylesheet" href="register.css">
+</head>
+<body>
+  <!-- Main container that holds form and image sections -->
+  <div class="container">
+
+    <!-- Registration form section -->
+    <div class="form-section">
+      <h2>Create your account</h2>
+      <p>Join our community and shop smartly!</p>
+
+      <!-- Form starts -->
+      <form>
+        <!-- Full Name input -->
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required />
+
+        <!-- Email input -->
+        <label for="email">Email address</label>
+        <input type="email" id="email" name="email" placeholder="example@email.com" required />
+
+        <!-- Password input -->
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="********" required />
+
+        <!-- Confirm Password input -->
+        <label for="confirm">Confirm Password</label>
+        <input type="password" id="confirm" name="confirm" placeholder="********" required />
+
+        <!-- Submit button -->
+        <button type="submit">Sign up</button>
+      </form>
+      <!-- Login redirect link -->
+      <p class="login-link">Already have an account? <a href="login.html">Login</a></p>
+    </div>
+
+    <!-- Image section to visually enhance the page -->
+    <div class="illustration-section">
+      <img src="./assets/signup.png" alt="Sign up image" />
+    </div>
+
+  </div>
+</body>
+</html>

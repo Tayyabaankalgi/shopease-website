@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta tags for character encoding and responsive behavior -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  <!-- Page title -->
+  <title>ShopEase - E-commerce</title>
+
+  <!-- Linking external CSS file -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header section with site title and navigation -->
+  <header>
+    <h1>🛍️ ShopEase</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="cart.html">Cart 🛒 <span id="cart-count">0</span></a> <!-- Dynamic cart count -->
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+
+  <!-- Filter buttons to filter products by category -->
+  <section class="filters">
+    <button onclick="filterProducts('all')">All</button>
+    <button onclick="filterProducts('electronics')">Electronics</button>
+    <button onclick="filterProducts('clothing')">Clothing</button>
+  </section>
+
+  <!-- Product grid where all the product cards will be dynamically inserted -->
+  <section class="product-grid" id="product-grid">
+    <!-- Products will load here dynamically using JavaScript -->
+  </section>
+
+  <!-- Footer section containing about, quick links, and contact info -->
+  <footer class="footer">
+    <div class="footer-container">
+
+      <!-- About section -->
+      <div class="footer-section about">
+        <h2>About Shopease</h2>
+        <p>Shopease is your one-stop destination for seamless online shopping. We bring together a wide range of quality products—from electronics to fashion—designed to enhance your lifestyle. Easy, fast, and reliable shopping at your fingertips!</p>
+      </div>
+
+      <!-- Quick navigation links -->
+      <div class="footer-section links">
+        <h2>Quick Links</h2>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="register.html">Register</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact details -->
+      <div class="footer-section contact">
+        <h2>Contact Us</h2>
+        <p>Email: support@shopease.com</p>
+        <p>Phone: +91-000-000-0000</p>
+      </div>
+    </div>
+
+    <!-- Footer bottom with copyright -->
+    <div class="footer-bottom">
+      <p>&copy; 2025 Shopease | Crafted with ❤️ by Tayyaba</p>
+    </div>
+  </footer>
+
+  <!-- External JavaScript file for dynamic content and interactions -->
+  <script src="script.js"></script>
+</body>
+</html>

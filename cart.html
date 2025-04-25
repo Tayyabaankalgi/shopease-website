@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta tags for character encoding and responsiveness -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- Page title -->
+  <title>Your Cart - ShopEase</title>
+
+  <!-- Linking the CSS file specific to cart styling -->
+  <link rel="stylesheet" href="cart.css" />
+</head>
+<body>
+
+  <!-- Header section -->
+  <header>
+    <h1>🛒 Your Cart</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+
+  <!-- Section to display all cart items -->
+  <section class="cart-items" id="cart-items">
+    <!-- Cart items will be rendered here dynamically via JavaScript -->
+  </section>
+
+  <!-- Section to show total price and checkout button -->
+  <section class="cart-summary" id="cart-summary">
+    <!-- Total and checkout will be updated dynamically -->
+  </section>
+
+  <!-- JavaScript Section -->
+  <script>
+    // Sample product database
+    const products = [
+      {
+        id: 1, name: "Smartphone", category: "electronics",
+        image: "assets/smartphone.png", price: 20000
+      },
+      {
+        id: 2, name: "T-shirt", category: "clothing",
+        image: "assets/tshirt.png", price: 300
+      },
+      {
+        id: 3, name: "Laptop", category: "electronics",
+        image: "assets/laptop.png", price: 51999
+      },
+      {
+        id: 4, name: "Jeans", category: "clothing",
+        image: "assets/jeans.png", price: 2200
+      }
+    ];
+
+    // Function to load cart items from local storage and render them
+    function loadCart() {
+      const cartContainer = document.getElementById("cart-items");
+      const summaryContainer = document.getElementById("cart-summary");
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+      // Display message if cart is empty
+      if (cart.length === 0) {
+        cartContainer.innerHTML = "<p>Your cart is empty 😔</p>";
+        summaryContainer.innerHTML = " <p>Looks like you haven’t added anything yet. Start shopping and fill it with things you love! 💚</p>";
+        return;
+      }
+
+      // Calculate total and display items
+      let total = 0;
+      cartContainer.innerHTML = ""; // Clear existing items
+      cart.forEach((id, index) => {
+        const product = products.find(p => p.id === id); // Find product by ID
+        total += product.price;
+
+        // Create HTML structure for each cart item
+        const item = document.createElement("div");
+        item.classList.add("product");
+        item.innerHTML = `
+          <img src="${product.image}" alt="${product.name}">
+          <h3>${product.name}</h3>
+          <p>₹${product.price}</p>
+          <button onclick="removeItem(${index})">Remove</button>
+        `;
+        cartContainer.appendChild(item);
+      });
+
+      // Update summary section with total price and checkout button
+      summaryContainer.innerHTML = `
+        <h2>Total: ₹${total}</h2>
+        <button onclick="checkout()" class="add-to-cart">Checkout</button>
+      `;
+    }
+
+    // Function to remove an item from the cart by index
+    function removeItem(index) {
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      cart.splice(index, 1); // Remove item from array
+      localStorage.setItem("cart", JSON.stringify(cart)); // Save updated cart
+      loadCart(); // Reload cart display
+    }
+
+    // Function to simulate checkout process
+    function checkout() {
+      alert("🎉 Thank you for your purchase!");
+      localStorage.removeItem("cart"); // Clear cart
+      loadCart(); // Reload cart
+    }
+
+    // Load cart when DOM is fully loaded
+    document.addEventListener("DOMContentLoaded", loadCart);
+  </script>
+</body>
+</html>

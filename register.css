@@ -1,0 +1,165 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif; /* Clean, modern font */
+  }
+  
+  /* Center the entire layout vertically and horizontally */
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f6f6f6; /* Soft gray background */
+  }
+  
+  /* Container holding form and illustration */
+  .container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-radius: 12px; /* Rounded corners */
+    overflow: hidden; /* Ensures children don’t overflow */
+  }
+  
+  /* Form section styles */
+  .form-section {
+    flex: 1;
+    padding: 50px;
+    background-color: #fff; /* White background for form */
+    border-right: 2px solid #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .form-section h2 {
+    color: #3c3b2b; /* Dark heading */
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-weight: 700;
+  }
+  
+  .form-section p {
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 18px;
+  }
+  
+  /* Form layout */
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  /* Input label styling */
+  label {
+    margin-bottom: 8px;
+    color: #444;
+    font-weight: 600;
+    font-size: 14px;
+  }
+  
+  /* Input field styling */
+  input {
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    transition: border 0.3s ease;
+  }
+  
+  input:focus {
+    border-color: #67AE6E; /* Highlight on focus */
+    outline: none;
+  }
+  
+  /* Submit button styling */
+  button {
+    padding: 14px;
+    background-color: #67AE6E; /* Olive green */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  button:hover {
+    background-color: #55a84d; /* Darker green on hover */
+    transform: translateY(-3px); /* Slight lift effect */
+  }
+  
+  /* Login link styles */
+  .login-link {
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  
+  .login-link a {
+    color: #67AE6E;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  .login-link a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Illustration/image section */
+  .illustration-section {
+    flex: 1;
+    background-color: #90C67C; /* Light green */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .illustration-section img {
+    width: 100%;
+    max-width: 400px;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  /* Simple fade-in animation */
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  /* Responsive styles for tablets and smaller devices */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      padding: 20px;
+    }
+  
+    .form-section {
+      padding: 40px 30px;
+    }
+  
+    .illustration-section {
+      padding: 20px;
+    }
+  
+    .form-section h2 {
+      font-size: 28px;
+    }
+  
+    .form-section p {
+      font-size: 16px;
+    }
+  
+    .login-link {
+      font-size: 16px;
+    }
+  }
+  
